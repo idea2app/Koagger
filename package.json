@@ -1,0 +1,68 @@
+{
+    "name": "koagger",
+    "version": "0.2.0",
+    "license": "LGPL-3.0",
+    "description": "A Koa middleware provides Swagger API document & Mock API for routing-controllers framework",
+    "keywords": [
+        "koa",
+        "middleware",
+        "swagger",
+        "api",
+        "mock",
+        "typescript",
+        "controller"
+    ],
+    "author": "shiy2008@gmail.com",
+    "homepage": "https://tech-query.me/Koagger/",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/TechQuery/Koagger.git"
+    },
+    "bugs": {
+        "url": "https://github.com/TechQuery/Koagger/issues"
+    },
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "dependencies": {
+        "class-validator-jsonschema": "^3.0.1",
+        "koa2-swagger-ui": "^5.0.5",
+        "openapi-backend": "^3.9.1",
+        "routing-controllers-openapi": "^3.0.0"
+    },
+    "peerDependencies": {
+        "class-transformer": "^0.4.0",
+        "class-validator": "^0.13.1",
+        "koa": "^2.13.1",
+        "koa-mount": "^4.0.0",
+        "routing-controllers": "^0.9.0"
+    },
+    "devDependencies": {
+        "@types/koa": "^2.13.1",
+        "@types/koa-mount": "^4.0.0",
+        "class-transformer": "^0.4.0",
+        "class-validator": "^0.13.1",
+        "husky": "^6.0.0",
+        "koa": "^2.13.1",
+        "koa-mount": "^4.0.0",
+        "lint-staged": "^10.5.4",
+        "prettier": "^2.2.1",
+        "routing-controllers": "^0.9.0",
+        "typedoc": "^0.20.34",
+        "typescript": "^4.2.3"
+    },
+    "prettier": {
+        "singleQuote": true,
+        "trailingComma": "none",
+        "arrowParens": "avoid",
+        "tabWidth": 4
+    },
+    "lint-staged": {
+        "*.{md,json,yml,ts}": "prettier --write"
+    },
+    "scripts": {
+        "prepare": "husky install",
+        "test": "lint-staged",
+        "build": "rm -rf dist/ docs/  &&  tsc  &&  typedoc source/",
+        "prepublishOnly": "npm test  &&  npm run build"
+    }
+}
