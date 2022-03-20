@@ -2,8 +2,9 @@
 
 A [Koa][1] middleware provides [Swagger][2] API document & **Mock API** for [routing-controllers][3] framework.
 
-[![NPM Dependency](https://david-dm.org/TechQuery/Koagger.svg)][4]
-[![CI & CD](https://github.com/TechQuery/Koagger/workflows/CI%20&%20CD/badge.svg)][5]
+[![NPM Dependency](https://david-dm.org/idea2app/Koagger.svg)][4]
+[![CI & CD](https://github.com/idea2app/Koagger/actions/workflows/main.yml/badge.svg)][5]
+
 [![NPM](https://nodei.co/npm/koagger.png?downloads=true&downloadRank=true&stars=true)][6]
 
 ## Usage
@@ -11,7 +12,9 @@ A [Koa][1] middleware provides [Swagger][2] API document & **Mock API** for [rou
 ```shell
 npm install koagger \
     koa koa-mount \
-    routing-controllers class-transformer class-validator
+    routing-controllers routing-controllers-openapi \
+    class-transformer \
+    class-validator class-validator-jsonschema
 ```
 
 `index.ts`
@@ -46,7 +49,7 @@ app.listen(port, () => {
 [1]: https://koajs.com/
 [2]: https://swagger.io/
 [3]: https://github.com/typestack/routing-controllers
-[4]: https://david-dm.org/TechQuery/Koagger
-[5]: https://github.com/TechQuery/Koagger/actions
+[4]: https://david-dm.org/idea2app/Koagger
+[5]: https://github.com/idea2app/Koagger/actions/workflows/main.yml
 [6]: https://nodei.co/npm/koagger/
 [7]: https://github.com/idea2app/NodeTS-LeanCloud
