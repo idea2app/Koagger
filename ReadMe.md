@@ -10,11 +10,7 @@ A [Koa][1] middleware provides [Swagger][2] API document & **Mock API** for [rou
 ## Usage
 
 ```shell
-npm install koagger \
-    koa koa-mount \
-    routing-controllers routing-controllers-openapi \
-    class-transformer \
-    class-validator class-validator-jsonschema
+npm install koagger
 ```
 
 `index.ts`
@@ -26,25 +22,39 @@ import { createAPI } from 'koagger';
 
 import controllers from './controller';
 
-const port = process.env.PORT || 8080,
+const { PORT = 8080 } = process.env,
     { swagger, mocker, router } = createAPI({ controllers, mock: true });
 
-const app = new Koa().use(swagger()).use(mocker());
+const HOST = `http://localhost:${PORT}`,
+    app = new Koa().use(swagger()).use(mocker());
 
 useKoaServer(app, router);
 
-app.listen(port, () => {
-    const baseURL = `http://localhost:${port}`;
+app.listen(PORT, () =>
+    console.log(`
+HTTP served at ${HOST}
+Swagger API served at ${HOST}/docs/
+Mock API served at ${HOST}/mock/
+`)
+);
+```
 
-    console.log(`HTTP Server runs at ${baseURL}`);
-    console.log(`RESTful API document serves at ${baseURL}/docs`);
-    console.log(`Mock API serves at ${baseURL}/mock`);
-});
+## Development
+
+```shell
+git clone https://github.com/idea2app/Koagger.git ~/Desktop/Koagger
+
+cd ~/Desktop/Koagger
+
+yarn
+
+yarn dev  # or just press F5 key in VS Code
 ```
 
 ## Cases
 
 -   [NodeTS-LeanCloud][7] scaffold
+-   [REST-Node-ts][8] scaffold
 
 [1]: https://koajs.com/
 [2]: https://swagger.io/
@@ -53,3 +63,4 @@ app.listen(port, () => {
 [5]: https://github.com/idea2app/Koagger/actions/workflows/main.yml
 [6]: https://nodei.co/npm/koagger/
 [7]: https://github.com/idea2app/NodeTS-LeanCloud
+[8]: https://github.com/idea2app/REST-Node-ts

@@ -1,6 +1,6 @@
 {
     "name": "koagger",
-    "version": "0.2.3",
+    "version": "0.2.4",
     "license": "LGPL-3.0",
     "description": "A Koa middleware provides Swagger API document & Mock API for routing-controllers framework",
     "keywords": [
@@ -24,31 +24,26 @@
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
     "dependencies": {
+        "class-transformer": "^0.5.1",
+        "class-validator": "^0.13.2",
         "class-validator-jsonschema": "^3.1.0",
+        "koa": "^2.13.4",
+        "koa-mount": "^4.0.0",
         "koa2-swagger-ui": "^5.5.0",
         "openapi-backend": "^5.3.0",
+        "routing-controllers": "^0.9.0",
         "routing-controllers-openapi": "^3.1.0"
-    },
-    "peerDependencies": {
-        "class-transformer": "^0.5.0",
-        "class-validator": "^0.13.0",
-        "koa": "^2.0.0",
-        "koa-mount": "^4.0.0",
-        "routing-controllers": "^0.9.0"
     },
     "devDependencies": {
         "@types/koa": "^2.13.4",
         "@types/koa-mount": "^4.0.1",
-        "class-transformer": "^0.5.1",
-        "class-validator": "^0.13.2",
         "husky": "^7.0.4",
-        "koa": "^2.13.4",
-        "koa-mount": "^4.0.0",
         "lint-staged": "^12.3.7",
-        "prettier": "^2.6.0",
-        "routing-controllers": "^0.9.0",
+        "prettier": "^2.6.1",
+        "reflect-metadata": "^0.1.13",
+        "ts-node-dev": "^1.1.8",
         "typedoc": "^0.22.13",
-        "typescript": "^4.6.2"
+        "typescript": "^4.6.3"
     },
     "prettier": {
         "singleQuote": true,
@@ -61,6 +56,7 @@
     },
     "scripts": {
         "prepare": "husky install",
+        "dev": "cd test/  &&  ts-node-dev index.ts",
         "test": "lint-staged",
         "build": "rm -rf dist/ docs/  &&  tsc  &&  typedoc source/",
         "prepublishOnly": "npm test  &&  npm run build"

@@ -8,15 +8,15 @@ export interface MockerOptions {
 
 export function createMocker({ spec }: MockerOptions) {
     const mocker = new OpenAPIBackend({
-        definition: spec as Document,
+        definition: spec,
         handlers: {
             notImplemented(
                 { api, operation: { operationId } },
                 context: Context
             ) {
-                const { status, mock } = api.mockResponseForOperation(
-                    operationId
-                );
+                const { status, mock } =
+                    api.mockResponseForOperation(operationId);
+
                 context.status = status;
                 context.body = mock;
             }
