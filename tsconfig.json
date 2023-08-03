@@ -13,7 +13,6 @@
         "name": "Koagger",
         "excludeExternals": true,
         "excludePrivate": true,
-        "readme": "./ReadMe.md",
-        "out": "docs/"
+        "readme": "./ReadMe.md"
     }
 }

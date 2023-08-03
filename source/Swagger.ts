@@ -4,9 +4,10 @@ import { routingControllersToSpec } from 'routing-controllers-openapi';
 import { defaultMetadataStorage } from 'class-transformer/cjs/storage';
 import { validationMetadatasToSchemas } from 'class-validator-jsonschema';
 import { koaSwagger, KoaSwaggerUiOptions } from 'koa2-swagger-ui';
+import type {} from 'openapi3-ts';
 
 export interface SwaggerOptions {
-    controllers: Function[];
+    controllers: (new (...data: any[]) => any)[];
 }
 
 export function createSwagger({ controllers }: SwaggerOptions) {
