@@ -2,7 +2,7 @@
 
 A [Koa][1] middleware provides [Swagger][2] API document & **Mock API** for [routing-controllers][3] framework.
 
-[![NPM Dependency](https://david-dm.org/idea2app/Koagger.svg)][4]
+[![NPM Dependency](https://img.shields.io/librariesio/github/idea2app/Koagger.svg)][4]
 [![CI & CD](https://github.com/idea2app/Koagger/actions/workflows/main.yml/badge.svg)][5]
 
 [![NPM](https://nodei.co/npm/koagger.png?downloads=true&downloadRank=true&stars=true)][6]
@@ -59,7 +59,7 @@ yarn dev  # or just press F5 key in VS Code
 [1]: https://koajs.com/
 [2]: https://swagger.io/
 [3]: https://github.com/typestack/routing-controllers
-[4]: https://david-dm.org/idea2app/Koagger
+[4]: https://libraries.io/npm/koagger
 [5]: https://github.com/idea2app/Koagger/actions/workflows/main.yml
 [6]: https://nodei.co/npm/koagger/
 [7]: https://github.com/idea2app/NodeTS-LeanCloud
