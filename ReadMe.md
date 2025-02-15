@@ -46,15 +46,15 @@ git clone https://github.com/idea2app/Koagger.git ~/Desktop/Koagger
 
 cd ~/Desktop/Koagger
 
-yarn
+pnpm i
 
-yarn dev  # or just press F5 key in VS Code
+pnpm dev  # or just press F5 key in VS Code
 ```
 
 ## Cases
 
--   [NodeTS-LeanCloud][7] scaffold
--   [REST-Node-ts][8] scaffold
+- [NodeTS-LeanCloud][7] scaffold
+- [REST-Node-ts][8] scaffold
 
 [1]: https://koajs.com/
 [2]: https://swagger.io/

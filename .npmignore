@@ -1,5 +1,3 @@
 test/
 docs/
-.husky/
-.vscode/
-.github/
+.*
