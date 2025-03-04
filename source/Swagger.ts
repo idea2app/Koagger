@@ -23,6 +23,7 @@ export function createSwagger({ controllers }: SwaggerOptions) {
         swaggerOptions,
         ...opitons
     }: Partial<KoaSwaggerUiOptions> = {}) =>
+        // @ts-expect-error Type compatibility between koa2-swagger-ui & routing-controllers-openapi
         koaSwagger({ swaggerOptions: { spec, ...swaggerOptions }, ...opitons });
 
     return { router, schemas, spec, swagger };

@@ -1,6 +1,6 @@
 {
     "name": "koagger",
-    "version": "0.3.1",
+    "version": "0.4.0",
     "license": "LGPL-3.0",
     "description": "A Koa middleware provides Swagger API document & Mock API for routing-controllers framework",
     "keywords": [
@@ -29,14 +29,14 @@
     "dependencies": {
         "class-transformer": "^0.5.1",
         "class-validator": "^0.14.1",
-        "class-validator-jsonschema": "^4.0.0",
-        "koa": "^2.15.4",
+        "class-validator-jsonschema": "^5.0.2",
+        "koa": "^2.16.0",
         "koa-mount": "^4.0.0",
         "koa2-swagger-ui": "^5.11.0",
         "openapi-backend": "^5.11.1",
-        "openapi3-ts": "^2.0.2",
-        "routing-controllers": "^0.11.0",
-        "routing-controllers-openapi": "^4.1.0",
+        "openapi3-ts": "^3.2.0",
+        "routing-controllers": "^0.11.1",
+        "routing-controllers-openapi": "^5.0.0",
         "tslib": "^2.8.1"
     },
     "devDependencies": {
@@ -44,11 +44,11 @@
         "@types/koa-mount": "^4.0.5",
         "husky": "^9.1.7",
         "lint-staged": "^15.4.3",
-        "prettier": "^3.5.1",
+        "prettier": "^3.5.3",
         "reflect-metadata": "^0.2.2",
         "ts-node-dev": "^2.0.0",
-        "typedoc": "^0.27.7",
-        "typescript": "~5.7.3"
+        "typedoc": "^0.27.9",
+        "typescript": "~5.8.2"
     },
     "prettier": {
         "singleQuote": true,
